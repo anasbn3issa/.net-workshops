@@ -36,5 +36,12 @@ namespace PS.Domain
             return "name : " + Name + " description : " + Description + " Quantity : " + Quantity;
         }
 
+        /*
+         * forcer le passage par reference /
+        public void Calculer(int a , int b ,ref int c)
+        {
+            c = a + b;
+            Console.WriteLine(c);
+        }*/
     }
 }

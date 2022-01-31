@@ -25,7 +25,20 @@ namespace PS.GUI
                 //Password = "abd",
                 //and now the valid password 
                 Password = "1234569",
+                ConfirmPassword = "1234569"
             };
+
+            Console.WriteLine("provider.isApproved = "+ provider.IsApproved);
+            Provider.SetIsApproved(provider);
+            Console.WriteLine("provider.isApproved = " + provider.IsApproved);
+
+            /*
+            int i = 3;
+            int j = 2;
+            int k = 69;
+            p2.Calculer(i, j,ref k);
+            Console.WriteLine(k); // it will show 69 no matter what happens in "Calculer" . 
+            */
         }
     }
 }

@@ -50,5 +50,22 @@ namespace PS.Domain
 
         public List<Product> Products { get; set; }
 
+
+
+        public static void SetIsApproved(Provider p)
+        {
+            /* if (p.password == p.confirmPassword)
+                 p.IsApproved = true;
+             else
+                 p.IsApproved = false;*/
+
+            p.IsApproved = (p.password == p.confirmPassword);
+        }
+
+        public static void SetIsApproved(string password, string confirmPassword, bool isApproved)
+        {
+            isApproved = (password == confirmPassword);
+        }
+
     }
 }
