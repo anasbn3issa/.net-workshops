@@ -1,28 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.GUI\\PS.GUI.csproj": {}
+    "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.GUI\\PS.GUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
+    "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
         "projectName": "PS.Domain",
-        "projectPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
-        "packagesPath": "C:\\Users\\my\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Domain\\obj\\",
+        "projectPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj",
+        "packagesPath": "C:\\Users\\anaso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\my\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\anaso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -54,39 +57,42 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.GUI\\PS.GUI.csproj": {
+    "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.GUI\\PS.GUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.GUI\\PS.GUI.csproj",
+        "projectUniqueName": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.GUI\\PS.GUI.csproj",
         "projectName": "PS.GUI",
-        "projectPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.GUI\\PS.GUI.csproj",
-        "packagesPath": "C:\\Users\\my\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.GUI\\obj\\",
+        "projectPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.GUI\\PS.GUI.csproj",
+        "packagesPath": "C:\\Users\\anaso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.GUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\my\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\anaso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
-                "projectPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj"
+              "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
+                "projectPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj"
               },
-              "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj": {
-                "projectPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj"
+              "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj": {
+                "projectPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj"
               }
             }
           }
@@ -115,36 +121,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj": {
+    "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj",
+        "projectUniqueName": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj",
         "projectName": "PS.Services",
-        "projectPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj",
-        "packagesPath": "C:\\Users\\my\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Services\\obj\\",
+        "projectPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Services\\PS.Services.csproj",
+        "packagesPath": "C:\\Users\\anaso\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Services\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\my\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\anaso\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
-                "projectPath": "C:\\Users\\my\\source\\repos\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj"
+              "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj": {
+                "projectPath": "C:\\Users\\anaso\\dotNet Esprit\\ProductStoreTWIN2\\PS.Domain\\PS.Domain.csproj"
               }
             }
           }
@@ -173,7 +182,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

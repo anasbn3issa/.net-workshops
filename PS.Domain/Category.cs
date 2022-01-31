@@ -6,7 +6,8 @@ namespace PS.Domain
 {
    public class Category
     {
-        public int CategorieId { get; set; }
+        public int CategoryId { get; set; }
+
         public String Name { get; set; }
     }
 }
