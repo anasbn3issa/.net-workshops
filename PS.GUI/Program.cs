@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using PS.Domain;
+using PS.Services;
+
 namespace PS.GUI
 {
     class Program
@@ -70,6 +72,12 @@ namespace PS.GUI
             Console.WriteLine("------------");
             provider.GetProducts("Name", "fraise");
             provider.GetProducts("DateProd", "2012/11/23");
+
+
+            Console.WriteLine("tester DisplayUsernameAndEmail");
+            ManageProvider mp = new ManageProvider();
+            mp.providers.Add(provider);
+            mp.DisplayUsernameAndEmail("user1");
         }
     }
 }
