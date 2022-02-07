@@ -18,9 +18,6 @@ to practice differenct aspects of .net framework
   ```sh
    npm run runserver
    ```
-4. Serve the application
-  ``` ##not ready yet
-   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
