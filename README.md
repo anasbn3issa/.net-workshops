@@ -15,10 +15,11 @@ to practice differenct aspects of .net framework
    npm install
    ```
 3. Run the back-end
-  
-4. Serve the application
   ```sh
-   ng serve
+   npm run runserver
+   ```
+4. Serve the application
+  ``` ##not ready yet
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
