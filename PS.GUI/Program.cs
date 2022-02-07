@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using PS.Domain;
 namespace PS.GUI
 {
@@ -8,6 +9,7 @@ namespace PS.GUI
         {
             Product p = new Product();
             p.Name = "Pomme de terre";
+            p.DateProd = new DateTime(2012, 11, 23);
             Console.WriteLine(p.Name.ToString());
 
             // initialiseur d'objet : 
@@ -16,6 +18,7 @@ namespace PS.GUI
                 Name = "fraise",
                 Price = 1.5,
                 Description = " mal à l'aise",
+                DateProd = DateTime.Now
             };
             Console.WriteLine(p2.ToString());
 
@@ -25,11 +28,16 @@ namespace PS.GUI
                 //Password = "abd",
                 //and now the valid password 
                 Password = "1234569",
-                ConfirmPassword = "1234569"
+                ConfirmPassword = "1234569",
+                Username = "user1",
+                Email = "user1@mail.com"
             };
 
             Console.WriteLine("provider.isApproved = "+ provider.IsApproved);
-            Provider.SetIsApproved(provider);
+            //Provider.SetIsApproved(provider);
+
+            //pour tester le passage par valeur -->
+            Provider.SetIsApproved(provider.Password,provider.ConfirmPassword, provider.IsApproved);
             Console.WriteLine("provider.isApproved = " + provider.IsApproved);
 
             /*
@@ -39,6 +47,29 @@ namespace PS.GUI
             p2.Calculer(i, j,ref k);
             Console.WriteLine(k); // it will show 69 no matter what happens in "Calculer" . 
             */
+
+            Console.WriteLine("la méthode login avec 2 params : ");
+            Console.WriteLine(provider.Login("user1", "1234569"));
+            Console.WriteLine("la méthode login avec 3 params : ");
+            Console.WriteLine(provider.Login("user2", "1234569", "user1@mail.com"));
+
+            // tester la méthode getMyType
+
+            //Product product = new Product();
+            Product chemical = new Chemical();
+            Biological biological = new Biological();
+
+            //product.GetMyType();
+            chemical.GetMyType();
+            biological.GetMyType();
+
+            //provider.Products = new List<Product>() { p,p2 };
+            provider.Products.Add(p);
+            provider.Products.Add(p2);
+            provider.GetDetails();
+            Console.WriteLine("------------");
+            provider.GetProducts("Name", "fraise");
+            provider.GetProducts("DateProd", "2012/11/23");
         }
     }
 }

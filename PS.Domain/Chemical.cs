@@ -16,5 +16,13 @@ namespace PS.Domain
         public String LabName { get; set; }
 
         public String StreetAdress { get; set; }
+
+ 
+        public override void GetMyType()
+        {
+            base.GetMyType(); // pour hériter console.write du parentk.
+            Console.Write("chimique\n");
+        }
+
     }
 }

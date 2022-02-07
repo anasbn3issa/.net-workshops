@@ -12,5 +12,11 @@ namespace PS.Domain
         //}
 
         public string Herbs { get; set; }
+
+        public void GetMyType()
+        {
+            base.GetMyType();
+            Console.Write("biologique\n");
+        }
     }
 }

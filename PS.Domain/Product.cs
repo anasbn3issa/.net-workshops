@@ -43,5 +43,10 @@ namespace PS.Domain
             c = a + b;
             Console.WriteLine(c);
         }*/
+
+        public virtual void GetMyType()
+        {
+            Console.Write("je suis un produit");
+        }
     }
 }
