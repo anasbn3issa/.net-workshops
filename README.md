@@ -8,7 +8,7 @@ to practice differenct aspects of .net framework
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/WajdiSd/-spirit-gestion-stock-front-end.git
+   git clone https://github.com/anasbn3issa/.net-workshops.git
    ```
 2. Install NPM packages
    ```sh
