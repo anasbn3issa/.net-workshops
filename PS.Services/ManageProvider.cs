@@ -44,6 +44,13 @@ namespace PS.Services
             return req;
         }
 
+        public Provider GetFirstProviderByName(string name)
+        {
+            var req = (from p in providers
+                       where p.Username.StartsWith(name)
+                       select p);
+            return req.First();
+        }
         public void DisplayUsernameAndEmail(string name)
         {
             var req = (from p in providers

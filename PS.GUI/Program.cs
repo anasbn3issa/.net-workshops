@@ -78,6 +78,16 @@ namespace PS.GUI
             ManageProvider mp = new ManageProvider();
             mp.providers.Add(provider);
             mp.DisplayUsernameAndEmail("user1");
+
+            // tester délégué 
+            Console.WriteLine("testing délégué'");
+            ManageProduct mprod = new ManageProduct();
+            mprod.lsProduct = new List<Product> { p, p2 };
+            foreach (Product pr in mprod.FindProduct('f'))
+            {
+                Console.WriteLine(pr);
+            }
+
         }
     }
 }

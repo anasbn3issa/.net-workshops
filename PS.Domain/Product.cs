@@ -27,13 +27,15 @@ namespace PS.Domain
 
         public string  Description { get; set; }
 
+        public Category Category { get; set; }
+
         public int Quantity { get; set; }
 
         public List<Provider> Providers { get; set; }
 
         public override string ToString()
         {
-            return "name : " + Name + " description : " + Description + " Quantity : " + Quantity;
+            return "name : " + Name + " description : " + Description + " Quantity : " + Quantity + " Category : " + Category;
         }
 
         /*
