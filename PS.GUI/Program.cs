@@ -88,6 +88,9 @@ namespace PS.GUI
                 Console.WriteLine(pr);
             }
 
+            string s = "test Majuscule";
+            s.FirstCharToUpper();
+
         }
     }
 }
