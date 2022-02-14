@@ -43,8 +43,7 @@ namespace PS.Services
                                   select p.Username).ToList();
             return req;*/
 
-            var req = providers.Where(p => p.Username.Contains(name)).Select(p => p.Email);
-            return req.ToList();
+            return providers.Where(p => p.Username.Contains(name)).Select(p => p.Email).ToList();
         }
 
         public Provider GetFirstProviderByName(string name)
