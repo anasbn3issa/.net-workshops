@@ -38,10 +38,13 @@ namespace PS.Services
 
         public List<String> GetProviderEmailsByName(string name)
         {
-            List<String> req = (from p in providers
+            /*List<String> req = (from p in providers
                                   where p.Username.Contains(name)
                                   select p.Username).ToList();
-            return req;
+            return req;*/
+
+            var req = providers.Where(p => p.Username.Contains(name)).Select(p => p.Email);
+            return req.ToList();
         }
 
         public Provider GetFirstProviderByName(string name)

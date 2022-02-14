@@ -37,11 +37,11 @@ namespace PS.Services
                 var req = from p in lsProduct
                           where p.Category.CategoryId == car.CategoryId
                           select p;
-                foreach(Product p in req)
+                foreach (Product p in req)
                 {
                     Console.WriteLine(p);
                 }
-            }
+            };
         }
     }
 }
