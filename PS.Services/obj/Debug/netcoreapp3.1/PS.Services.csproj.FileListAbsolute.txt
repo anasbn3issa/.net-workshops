@@ -24,3 +24,5 @@ C:\Users\anaso\dotNet Esprit\ProductStoreTWIN2\PS.Services\obj\Debug\netcoreapp3
 C:\Users\anaso\dotNet Esprit\ProductStoreTWIN2\PS.Services\obj\Debug\netcoreapp3.1\PS.Services.csproj.CopyComplete
 C:\Users\anaso\dotNet Esprit\ProductStoreTWIN2\PS.Services\obj\Debug\netcoreapp3.1\PS.Services.dll
 C:\Users\anaso\dotNet Esprit\ProductStoreTWIN2\PS.Services\obj\Debug\netcoreapp3.1\PS.Services.pdb
+C:\Users\anaso\dotNet Esprit\ProductStoreTWIN2\PS.Services\bin\Debug\netcoreapp3.1\PS.Data.dll
+C:\Users\anaso\dotNet Esprit\ProductStoreTWIN2\PS.Services\bin\Debug\netcoreapp3.1\PS.Data.pdb
