@@ -10,13 +10,9 @@ to practice differenct aspects of .net framework
    ```sh
    git clone https://github.com/anasbn3issa/.net-workshops.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-3. Run the back-end
+3. akahaw
   ```sh
-   npm run runserver
+   :D :D
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
