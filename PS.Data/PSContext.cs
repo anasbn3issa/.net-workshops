@@ -12,6 +12,7 @@ namespace PS.Data
         public DbSet<Biological> Biologicals { get; set; }
         public DbSet<Chemical> Chemicals { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Provider> Providers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PS.Data;
 using PS.Domain;
 using PS.Services;
 
@@ -42,13 +43,7 @@ namespace PS.GUI
             Provider.SetIsApproved(provider.Password,provider.ConfirmPassword, provider.IsApproved);
             Console.WriteLine("provider.isApproved = " + provider.IsApproved);
 
-            /*
-            int i = 3;
-            int j = 2;
-            int k = 69;
-            p2.Calculer(i, j,ref k);
-            Console.WriteLine(k); // it will show 69 no matter what happens in "Calculer" . 
-            */
+           
 
             Console.WriteLine("la méthode login avec 2 params : ");
             Console.WriteLine(provider.Login("user1", "1234569"));
@@ -90,6 +85,13 @@ namespace PS.GUI
 
             string s = "test Majuscule";
             s.FirstCharToUpper();
+
+            //insertion dans la bd
+            
+            PSContext ctx = new PSContext();
+            ctx.Products.Add(p);
+            ctx.Biologicals.Add(biological);
+            ctx.SaveChanges();
 
         }
     }

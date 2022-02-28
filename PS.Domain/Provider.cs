@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace PS.Domain
 {
   public  class Provider : Concept
     {
+        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "Email is required")]
         public String Email { get; set; }
-
+        [Key] // in this case , this is useless because our PK is [className]Id but we use [key] annotation when the name is different
         public int ProviderId { get; set; }
 
         public Boolean IsApproved { get; set; }
@@ -17,7 +21,11 @@ namespace PS.Domain
          * we will work with the following syntax for the 
          * attribute // setters // getters
          */
+        
         private String password;
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage ="password is required")]
+        [MinLength(8,ErrorMessage ="password has to contain less than 8 chars")]
         public string Password
         {
             get { return password; }
@@ -32,6 +40,11 @@ namespace PS.Domain
 
 
         private String confirmPassword;
+        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "confirmPassword is required")]
+        [MinLength(8, ErrorMessage = "password has to contain less than 8 chars")]
+        [NotMapped]
+        [Compare("passwords must match")]
         public string ConfirmPassword
         {
             get { return confirmPassword; }
@@ -46,7 +59,7 @@ namespace PS.Domain
 
         public String Username { get; set; }
 
-        public DateTime DateCreated { get; set; }
+       // public DateTime DateCreated { get; set; }
 
         public List<Product> Products { get; set; } = new List<Product>();
 

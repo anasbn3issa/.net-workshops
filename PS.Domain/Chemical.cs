@@ -11,13 +11,11 @@ namespace PS.Domain
         //{
         //}
 
-        public String City { get; set; }
 
         public String LabName { get; set; }
 
-        public String StreetAdress { get; set; }
+        public Adress Adress { get; set; }
 
- 
         public override void GetMyType()
         {
             base.GetMyType(); // pour hériter console.write du parentk.

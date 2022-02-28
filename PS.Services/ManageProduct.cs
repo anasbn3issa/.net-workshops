@@ -81,11 +81,11 @@ namespace PS.Services
         public int GetCountProduct(string city)
         {
             var req1 = from p in lsProduct.OfType<Chemical>()
-                       where p.City.Equals(city)
+                       where p.Adress.City.Equals(city)
                        select p;
             return req1.Count();
             
-            var req2 = lsProduct.OfType<Chemical>().Where(p => p.City.Equals(city));
+            var req2 = lsProduct.OfType<Chemical>().Where(p => p.Adress.City.Equals(city));
             return req2.Count();
         }
 
@@ -95,7 +95,7 @@ namespace PS.Services
         public IEnumerable<Chemical> GetChemicalCity()
         {
             var req1 = from p in lsProduct.OfType<Chemical>()
-                       orderby p.City // orderby p.City descending 
+                       orderby p.Adress.City // orderby p.City descending 
                        select p;
             return req1;
         }
@@ -107,8 +107,8 @@ namespace PS.Services
         public IEnumerable<IGrouping<string, Chemical>> GetChemicalGroupByCity()
         {
             var req1 = from p in lsProduct.OfType<Chemical>()
-                       orderby p.City
-                       group p by p.City;
+                       orderby p.Adress.City
+                       group p by p.Adress.City;
             foreach( var g in req1)
             {
                 Console.WriteLine("-----------------------\nKey : "+g.Key);

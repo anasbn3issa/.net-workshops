@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace PS.Domain
@@ -19,16 +21,26 @@ namespace PS.Domain
 
         public int ProductId { get; set; }
 
+        [Required(ErrorMessage = "Name is required.")]
+        [StringLength(25, ErrorMessage = "The Name value cannot exceed 25 characters. ")]
+        [MaxLength(50)]
         public string Name { get; set; }
 
+        [DataType(DataType.Currency)]
         public double Price { get; set; }
-
+        [Display(Name="Production Date")]
+        [DataType(DataType.Date)]
         public DateTime DateProd { get; set; }
 
+        public string ImageName { get; set; }
+        [DataType(DataType.MultilineText)]
         public string  Description { get; set; }
 
+        [ForeignKey("CategoryFK")]
+        public int CategoryFK { get; set; }
         public Category Category { get; set; }
 
+        [Range(0,int.MaxValue)]
         public int Quantity { get; set; }
 
         public List<Provider> Providers { get; set; }
