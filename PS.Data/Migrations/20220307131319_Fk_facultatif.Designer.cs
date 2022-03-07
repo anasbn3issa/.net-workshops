@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PS.Data;
 
 namespace PS.Data.Migrations
 {
     [DbContext(typeof(PSContext))]
-    partial class PSContextModelSnapshot : ModelSnapshot
+    [Migration("20220307131319_Fk_facultatif")]
+    partial class Fk_facultatif
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -27,13 +29,11 @@ namespace PS.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("MyCategories");
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("PS.Domain.Product", b =>
@@ -55,6 +55,10 @@ namespace PS.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
 
@@ -74,6 +78,8 @@ namespace PS.Data.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Product");
                 });
 
             modelBuilder.Entity("PS.Domain.Provider", b =>
@@ -114,7 +120,7 @@ namespace PS.Data.Migrations
 
                     b.HasIndex("ProvidersProviderId");
 
-                    b.ToTable("Providings");
+                    b.ToTable("ProductProvider");
                 });
 
             modelBuilder.Entity("PS.Domain.Biological", b =>
@@ -124,7 +130,7 @@ namespace PS.Data.Migrations
                     b.Property<string>("Herbs")
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("biologicals");
+                    b.HasDiscriminator().HasValue("Biological");
                 });
 
             modelBuilder.Entity("PS.Domain.Chemical", b =>
@@ -134,15 +140,14 @@ namespace PS.Data.Migrations
                     b.Property<string>("LabName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToTable("chemicals");
+                    b.HasDiscriminator().HasValue("Chemical");
                 });
 
             modelBuilder.Entity("PS.Domain.Product", b =>
                 {
                     b.HasOne("PS.Domain.Category", "Category")
-                        .WithMany("Products")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .WithMany()
+                        .HasForeignKey("CategoryId");
 
                     b.Navigation("Category");
                 });
@@ -162,23 +167,8 @@ namespace PS.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("PS.Domain.Biological", b =>
-                {
-                    b.HasOne("PS.Domain.Product", null)
-                        .WithOne()
-                        .HasForeignKey("PS.Domain.Biological", "ProductId")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("PS.Domain.Chemical", b =>
                 {
-                    b.HasOne("PS.Domain.Product", null)
-                        .WithOne()
-                        .HasForeignKey("PS.Domain.Chemical", "ProductId")
-                        .OnDelete(DeleteBehavior.ClientCascade)
-                        .IsRequired();
-
                     b.OwnsOne("PS.Domain.Adress", "Adress", b1 =>
                         {
                             b1.Property<int>("ChemicalProductId")
@@ -194,18 +184,13 @@ namespace PS.Data.Migrations
 
                             b1.HasKey("ChemicalProductId");
 
-                            b1.ToTable("chemicals");
+                            b1.ToTable("Products");
 
                             b1.WithOwner()
                                 .HasForeignKey("ChemicalProductId");
                         });
 
                     b.Navigation("Adress");
-                });
-
-            modelBuilder.Entity("PS.Domain.Category", b =>
-                {
-                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

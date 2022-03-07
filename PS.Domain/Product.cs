@@ -37,7 +37,7 @@ namespace PS.Domain
         public string  Description { get; set; }
 
         [ForeignKey("CategoryFK")]
-        public int CategoryFK { get; set; }
+        public int? CategoryFK { get; set; }
         public Category Category { get; set; }
 
         [Range(0,int.MaxValue)]

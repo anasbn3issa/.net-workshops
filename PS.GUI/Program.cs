@@ -54,8 +54,10 @@ namespace PS.GUI
 
             //Product product = new Product();
             Product chemical = new Chemical();
-            Biological biological = new Biological();
+            chemical.Name = "tensionix";
 
+            Biological biological = new Biological();
+            biological.Name = "LSD";
             //product.GetMyType();
             chemical.GetMyType();
             biological.GetMyType();

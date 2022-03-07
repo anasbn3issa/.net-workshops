@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PS.Data.myConfiguration;
 using PS.Domain;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,24 @@ namespace PS.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=ProductStoreDB;Integrated Security=true;MultipleActiveResultSets=True");
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;
+                                        Initial Catalog=ProductStoreDB;
+                                        Integrated Security=true;
+                                        MultipleActiveResultSets=True");
             base.OnConfiguring(optionsBuilder);
+
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+
+            //  configuring inheritance table per type (tpt)
+            // (soit nekhdmou b hethy soit nekhdmou beli fl Product Configuration )
+            modelBuilder.Entity<Chemical>().ToTable("chemicals");
+            modelBuilder.Entity<Biological>().ToTable("biologicals");
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
